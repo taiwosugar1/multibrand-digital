@@ -5,7 +5,10 @@
     font-optical-sizing: auto;
     font-weight: 100..700;
     font-style: normal;
+    width: 100%;
+    overflow-x: hidden;
   }
+  
 
  
 
@@ -13,140 +16,91 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  height: 100px;
+  height: 70px;
   width: 100%;
   background-color:rgb(209, 59, 102);
+  position: fixed;
 }
 
 .navdiv {
   display: flex;
-  
-  text-align: center;
-}
-.Logo {
-  display: flex;
-  background-color: rgb(233, 171, 175);
-  border-radius: 5px;
-  width: 120px;
-  height: 60px;
   align-items: center;
-  padding-left: 15px;
-  margin-top: 10px;
- 
-
+  justify-content: space-between;
+  z-index: 9999;
+    top: 0;
+    
+}
+ .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+.logo h4 {
+ color: aqua;
+}
+.logo h4 span{
+  color: blue;
 }
 
-.Logo a{
-  font-weight: 500;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  box-shadow:
-  0px 0px 3.6px rgba(0, 0, 0, 0.024),
-  0px 0px 10px rgba(0, 0, 0, 0.035),
-  0px 0px 24.1px rgba(0, 0, 0, 0.046),
-  0px 0px 80px rgba(0, 0, 0, 0.07);
-}
-
-ul{
-  margin-left: 650px;
-  padding-top: 8px;
-  margin-top: -2px;
+.navdiv ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin-left: 100px;
 }
 
 li{
-  display: inline-block;
+  margin: 10px;
   list-style: none;
+  width: 70px;
+  padding: 2px 5px;
 }
 
 li a{
   display: flex;
-  flex-wrap: wrap;
-    margin: 20px;
+   justify-content: center;
+   align-items: center;
+    text-decoration: none;
+    padding: 2px;
     color: white;
     font-weight: 600;
-    transition: background-color 1s color 1s;
   }
   
   li a:hover{
-  background-color: aqua;
-  color: blue;
-  border-style: solid;
+  background-color: blue;
   }
 
 
 .backround {
   display: flex;
-  animation-name: example;
-  animation-duration: 50s;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
-.anim-box{
-  display: flex;
-  justify-content: center;
 
-  width: 100px;
-  height: fit-content;
-  color: white;
-  background: red;
-  position: relative;
-  border-style: solid;
-  border-radius: 35px;
-  animation: myfirst 20s infinite;
-  animation-direction: alternate;
-  animation-timing-function: repeat;
-  text-align: center;
-  margin-top: -20px;
-  text-shadow: 2px 2px black;
- transition: transform 1s;
+.background .background-form{
+  margin-top: 16%;
+  margin-right: 40%;
+  margin-left: 13%;
 }
-.anim-box:hover{
-  transform: rotate(720deg);
-}
-@keyframes myfirst {
-  0% {background: rgb(94, 34, 6); left: 0px; top: 0px;}
-  25% { background: goldenrod; left: 1200px; top: 0px;}
-  50% {background: rgb(71, 71, 166); left: 90px; top: 500px;}
-  75% { background: rgb(62, 132, 62); left: 0px; top: 300px;}
-  100% { background: rgb(143, 42, 113); left: 0px; top: 0px;}
-}
-
-.man{
-  display: flex;
-  background-color: rgb(250, 245, 245);
-  background-image: url(one-man.png);
-  background-size: cover;
-  height: 570px;
-  width: 90%;
-  margin-left: 150px;
-  animation: man 40s infinite ease-in-out;
-}
-  @keyframes man{
-  0%{ background-image: url(man4.png);}
-  20%{ background-image: url(image-of-man2.png);}
- 40% {  background-image: url(one-man.png);}
- 60% {  background-image: url(man6.png);}
- 80% {  background-image: url(image-of-man.jpg);}
- 100% {  background-image: url(man5.png);}
-  }
-
-.man h1{
-  font-size: 70px;
+.background .background-form h1{
+  font-size: 60px;
   color:rgb(209, 59, 102);
-  margin-left: -60px;
-  margin-top: 120px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui,sans-serif;
 }
 
-input{
+.background-form form input{
   position: relative;
   display: inline-block;
   font-size: 20px;
   box-sizing: border-box;
-  margin-top: 330px;
-  margin-left: -520px;
+ 
 }
  
-  input[type="text"]{
+.background-form form input[type="text"]{
   position: relative;
 
   box-sizing: border-box;
@@ -156,7 +110,7 @@ input{
   border-radius: 11px 0 0 11px;
 }
 
- input[type="submit"] { 
+.background-form form input[type="submit"] { 
   position: relative;
   background-color:rgb(209, 59, 102);
   box-sizing: border-box;
@@ -168,27 +122,53 @@ input{
   cursor: pointer;
   color: white;
 }
+.man{
+  display: flex;
+  background-image: url(images/one-man.png);
+  background-size: cover;
+  height: 570px;
+  width: 50%;
+  margin-top: -25%;
+  margin-left: 50%;
+  animation: man 40s infinite ease-in-out;
+}
+  @keyframes man{
+  0%{ background-image: url(images/man4.png);}
+  20%{ background-image: url(images/image-of-man2.png);}
+ 40% {  background-image: url(images/one-man.png);}
+ 60% {  background-image: url(images/man6.png);}
+ 80% {  background-image: url(images/image-of-man.jpg);}
+ 100% {  background-image: url(images/man5.png);}
+  }
 
+.social-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
 
 .company {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding-top: 34px;
+  align-items: center;
   background-color: white;
-  width: 840px;
+  width: 800px;
   height: 90px;
-  margin-left: 19%;
-  margin-top: -40px;
-  border-radius: 25px;
-  box-shadow:
-  0px 0px 3.6px rgba(0, 0, 0, 0.024),
-  0px 0px 10px rgba(0, 0, 0, 0.035),
-  0px 0px 24.1px rgba(159, 11, 11, 0.046),
-  0px 0px 80px rgba(0, 0, 0, 0.07);
-  transition: width 4s, height 4s, background-color 4s 2s, transform 4s;
+  border-radius: 15px;
+  border: 0.5px solid black;
+  -moz-box-shadow: 0px -2px 18px -3px rgba(0,0,0,0.78);
+  -webkit-box-shadow: 0px -2px 18px -3px rgba(0,0,0,0.78);
+  box-shadow: 0px -2px 18px -3px rgba(0,0,0,0.78);
 }
 
+.company a{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .company a img {
   width: 50px;
   height: 50px;
@@ -198,37 +178,38 @@ input{
  
 .parent {
 display: flex;
-flex-wrap: wrap;
+align-items: center;
 justify-content: center;
+width: 100%;
 margin-top: 40px;
 padding-top: 50px;
 padding-bottom: 50px;
- transition: width 3s, background-color 5s, transform 3s;
+ transition: background-color 5s, transform 2s;
 }
 .parent:hover {
-  transform-box: stroke-box;
-  width:100%;
-  height: 100%;
   border-radius: 25px;
-  border: rgb(232, 230, 230) 2px;
-  border-style: ridge;
   background-color: gold;
 }
 .second-parent{
+  flex: 3;
  display: flex;
  flex-direction: row;
+ background: transparent;
+ margin-left: 30px;
 }
 .firstborn {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-right: 100px; 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px 80px;
+  font-family: system-ui, sans-serif;
 }
 .box1 {
   display: flex;
   background-color:  rgb(186, 34, 118);
   justify-content: center;
+  align-items: center;
   border-radius: 5px;
   width: 170px;
   height: 50px;
@@ -236,20 +217,19 @@ padding-bottom: 50px;
 .box1 h3 {
   color: bisque;
   font-weight: 600;
-  margin-top: 2px;
+  margin:4px;
 }
 
-.secondborn, .fourthborn {
+.secondborn, .fourthborn, .thirdborn {
   display: flex;
   background-color: white;
   width: 200px;
   height: 220px;
   border-radius: 20px;
-  margin: 10px;
+  margin: 20px;
   flex-direction: column;
   text-align: center;
   padding: 10px;
-  margin-right: 20px;
   color: rgb(97, 91, 91);
   box-shadow:
   0px 0px 3.6px rgba(0, 0, 0, 0.024),
@@ -257,77 +237,56 @@ padding-bottom: 50px;
   0px 0px 24.1px rgba(0, 0, 0, 0.046),
   0px 0px 80px rgba(0, 0, 0, 0.07);
   transition: width 2s, height 2s, background-color 2s, transform 2s;
+
 }
 .secondborn:hover, .fourthborn:hover {
-  transform-box: stroke-box;
-  width:250px;
-  height: 270px;
   border-radius: 25px;
   color: white;
   background-color: rgb(71, 64, 64);
   border-style: groove;
-  line-height: 40px;
+ 
 }
 
 .thirdborn {
   display: flex;
   color: white;
   background-color: rgb(186, 34, 118);
-  width: 200px;
-  height: 220px;
-  border-radius: 20px;
-  margin: 10px;
-  flex-direction: column;
-  text-align: center;
-  padding: 10px;
-  margin-right: 20px;
-  box-shadow:
-  0px 0px 3.6px rgba(0, 0, 0, 0.024),
-  0px 0px 10px rgba(0, 0, 0, 0.035),
-  0px 0px 24.1px rgba(0, 0, 0, 0.046),
-  0px 0px 80px rgba(0, 0, 0, 0.07);
-  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 .thirdborn:hover {
   transform-box: stroke-box;
-  width:250px;
-  height: 270px;
   border-radius: 25px;
   color: rgb(5, 14, 30);
   background-color: rgb(220, 48, 48);
   border-style: groove;
-  line-height: 40px;
 }
 
 .footer-father{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   background-color:  rgb(186, 34, 118);
-  padding-top: 30px;
-  margin-top: 40px;
+  height: 100px;
+  width: 100%;
 }
 .footer-father h3{
 color: white;
 font-size: 30px;
-margin-bottom: 80px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-family: system-ui,sans-serif;
+margin: 0px 50px;
 }
-.footer-child{
+.footer-father h4{
   display: flex;
   width: 180px;
   height: 40px;
   justify-content: space-around;
   background-color: white;
-  margin-left: 400px;
-align-items: center;
-border-radius: 3px;
-margin-top: 40px;
-}
-.footer-child h3{
   align-items: center;
-color: rgb(186, 34, 118);
-margin-top: 79px;
+  color: rgb(186, 34, 118);
+  align-items: center;
+  border-radius: 3px;
+  margin: 0px 50px;
 }
+
 
 .services {
   text-align: center;
@@ -386,142 +345,62 @@ margin-top: 79px;
  /* ----------box one-------- */
 
  .display{
-  margin-left: 550px;
+ 
   color: red;
   text-shadow: 2px 2px black;
  }
 .animation {
   display: flex;
-  flex-wrap: wrap;
-  background-image: url(backgroud9.jpg);
-  border-radius: 20px;
-  margin: 40px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-style: groove;
   text-align: center;
   justify-content: center;
-  box-shadow:
-  10px 10px 7px 6px rgba(0, 0, 0, 0.18),
-  3px 4.5px 4px 7px rgba(0, 0, 0, 0.15),
-  7px 2px 4px 5px rgba(0, 0, 0, 0.3),
-  8px 3px 33px 10px rgba(0, 0, 0, 0.1);
-  animation: change 30s infinite ease-in-out;
-}
-@keyframes change{
-  0%
-  {
-     background-image: url(image3.jpg);
-    }
-    20%
-    {
-    background-image: url(backgroud7.jpg);
-    }
-    40%
-    {
-    background-image: url(one.jpg.jpg);
-    }
-    60%
-    {
-    background-image: url(my-image2.jpg);
-    }
-    80%
-    {
-    background-image: url(backgroud2.jpg);
-    }
-    100%
-    {
-    background-image: url(backgroud3.jpg);
-    }
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 100%;
 
-  }
- .animation-one, .animation-two, .animation-three , .animation-four{
+}
+
+ .animation-one{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: none;
+  width: 80%;
+  margin-left: 60px;
+}
+.animation-one .box-one {
+  width:205px;
+  height: 280px;
   display: flex;
   justify-content: center;
-  background-color: none;
+  align-items: center;
+  flex-direction: column;
 }
- .box-one, .box-two, .box-three, .box-four, .box-five, .box-six, .box-seven, .box-eight, .box-nine, .box-ten, .box-eleven, .box-twelve,.box-thirteen, .box-fortheen, .box-fifteen, .box-sixteen {
+.animation-one .box-one img {
   border-style: groove;
   border-color: grey;
-  display: flex;
-  justify-content: center;
   width: 200px;
-  height: 200px;
-  margin: 30px;
+  height: 180px;
   background-size: cover;
   border-radius: 10px;
   color: white;
   text-shadow: 2px 2px black;
-  box-shadow:
-  1.2px 1.6px 3.6px rgba(0, 0, 0, 0.018),
-  3.3px 4.5px 10px rgba(0, 0, 0, 0.1),
-  7.8px 10.9px 24.1px rgba(0, 0, 0, 0.3),
-  26px 36px 80px rgba(0, 0, 0, 0.8);
-  transition: width 3s, height 3s, transform 3s;
+  
 }
 
-.box-one:hover, .box-two:hover, .box-three:hover, .box-four:hover, .box-five:hover, .box-six:hover, .box-seven:hover, .box-eight:hover, .box-nine:hover, .box-ten:hover, .box-eleven:hover, .box-twelve:hover,.box-thirteen:hover, .box-fortheen:hover, .box-fifteen:hover, .box-sixteen:hover{
-  transform:rotate(360deg);
-  width:400px;
-  height: 400px;
+.box-one h4{
+  font-weight: 600;
+  font-size: 16px;
+  width: 190px;
 }
 
-.box-one{
-  background-image: url(diairy.webp);
-}
- .box-two{
-background-image: url(lanyard.webp);
- }
- .box-three{
-background-image: url(signage-branding.webp) ;
- }
- .box-four{
-  background-image: url(product.webp);
- }
- .box-five{
-  background-image: url(jotter1.webp);
- }
- .box-six{
-  background-image: url(papperbag1.jpeg);
- }
- .box-seven {
-  background-image: url(T-SHIRTS2.webp);
- } 
- .box-eight{
-  background-image: url(productbranding.webp );
- }
- .box-nine{
-  background-image: url(businesscard.webp);
- }
- .box-ten{
-  background-image: url(mug.webp);
- }
- .box-eleven{
-  background-image: url(handbill.webp);
- }
- .box-twelve {
-  background-image: url(TOWEL3.webp);
- }
- .box-thirteen{
-  background-image: url(bag-new.webp);
- }
- .box-fortheen{
-  background-image: url(gift.webp);
- }
- .box-fifteen{
-  background-image: url(cap.webp);
- }
- .box-sixteen {
-  background-image: url(business-card.webp);
- }
+
 
 .Presenting {
   display: flex;
   justify-content: center;
   font-size: 25px;
   padding-top: 15px;
+  margin-left: 100px;
 }
 
 /*---------------------section two---------------------*/
@@ -529,24 +408,31 @@ background-image: url(signage-branding.webp) ;
 
 .girl-section {
   background-color: rgba(237, 238, 238, 0.903);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .girl-parent{
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  padding-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 
 .girl {
   display: flex;
-  justify-content: space-around;
-  width: 435px;
-  height: 485px;
+  justify-content: center;
+  width: 37%;
+  height: 350px;
   background-color: pink;
   padding: 10px;
-  margin-bottom: 120px;
+  margin-left: 50px;
   border-radius: 15px;
   box-shadow:
   1.2px 1.6px 3.6px rgba(0, 0, 0, 0.018),
@@ -556,29 +442,42 @@ background-image: url(signage-branding.webp) ;
 }
 
 .girl img{
-  padding-bottom: -10px;
   width: 100%;
-  height: 102%;
+  height: 100%;
 }
 
 .pregunta-parent{
   display: flex;
+  width: 40%;
   flex-direction: column;
-  line-height: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+.pregunta-parent div{
+ 
+  width: 100%;
+  margin: 10px 20px;
+
+
+
 }
 
 
 /*-----------------section three------------------------*/
 
+.section-three{
+  width: 100%;
+  height: 700px;
+  background-color: purple;
+}
+
 .under{
  display: flex;
- justify-content: space-around;
  width: 100%;
  height: 700px;
  color: white;
- flex-direction: row;
- justify-content: space-between;
- background-color: purple;
+ justify-content: space-evenly;
  transition: background-color 6s;
 }
 
@@ -588,45 +487,44 @@ border-style: groove;
 }
 
 .form-under-one{
+  width: 40%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  margin-left: 150px;
-  margin-top: -220px;
   text-shadow: 2px 2px  rgba(0, 0, 0, 1);
 }
+.form-under-one h1, .form-under-one h4{
+  color: rgb(213, 230, 230);
+  width: 80%;
+  }
 .form-under-one h1:hover, h4:hover{
 color: rgb(213, 230, 230);
 }
 
 .form-under-two {
-  margin-top: -220px;
-  margin-right: 60px;
+  margin-right: 10px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
 }
 
-.stand{
-  height: 50px;
-  width: 420px;
+.stand, textarea{
+  height: 40px;
+  width: 100%;
+  margin: 20px 0px;
   display: flex;
   flex-direction: column;
   border-color: rgb(209, 59, 102);
   border-radius: 10px;
   color: rgba(128, 128, 128, 0.74);
-  margin-bottom: -320px;
   font-size: 15px;
-}
-
-.stand-me{
-margin-bottom: -290px;
 }
 
 textarea {
   height: 100px;
-  width: 420px;
-  margin-left: -200px;
-  border-radius: 10px;
-  margin-left:-522px;
-  margin-bottom: -440px;
 }
 textarea:hover {
   background-color: rgb(238, 238, 189);
@@ -637,9 +535,7 @@ textarea:hover {
   background-color:  rgb(209, 59, 102);
   border-radius: 10px;
   height: 50px;
-  width: 425px;
-  margin-top: 475px;
-  margin-left: -520px;
+  width: 100%;
   color: white;
   justify-content: center;
   padding-top: 12px;
@@ -656,183 +552,287 @@ color: grey;
 
 .father {
   display: flex;
-  justify-content: space-between;
-  margin-right: 150px;
-  margin-left: 150px;
-  margin-top: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 20px;
+}
+.father .logo-two{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo-two {
+.father .logo-two a{
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(163, 115, 161);
   border-radius: 5px;
-  width: 100px;
+  width: 120px;
   height: 50px;
-  align-items: center;
-  padding-left: 10px;
-  padding-bottom: px;
-  margin-top: 26px;
+  padding: 10px;
+}
+.father .last h4{
+  text-align: start;
+  width: 200px;
 }
 
 .logo-two a{
   font-weight: 300;
   color: blue;
   font-family: Arial, Helvetica, sans-serif;
-  box-shadow:
-  0px 0px 3.6px rgba(0, 0, 0, 0.024),
-  0px 0px 10px rgba(0, 0, 0, 0.035),
-  0px 0px 24.1px rgba(0, 0, 0, 0.046),
-  0px 0px 80px rgba(0, 0, 0, 0.07)
 }
 
+
+.foot-details{
+  margin-top: 20px;
+  line-height: 40px;
+
+}
+.foot-details h3 span{
+  color: rgb(209, 59, 102);
+}
+.foot-details h3 a img{
+  width: 30px;
+  height: 30px;
+}
 footer{
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  align-items: center;
+  margin: 20px 43%;
   color: rgba(88, 84, 84, 0.839);
 }
 
 /*-----------------this is for 480creen-------------------*/
 
 @media (max-width:480px) {
-  body, html {
+  body {
     overflow-x: hidden;
     background-color: rgb(198, 224, 224);
     font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .navbar {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 150px;
+    align-items: center;
     width: 100%;
-    padding-left: 20px;
-    padding-top: 120px;
-    padding-bottom: 60px;
-    background-color:rgb(209, 59, 102);
+    height: 100px;
+    background: rgb(56, 56, 95);
+    z-index: 9999;
+    top: 0;
+    position: relative;
   }
   
   .navdiv {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 40px;
-    margin-bottom: 50px;
+    
   }
 
-  .Logo {
+  .logo {
     display: flex;
-    margin-right: 45px;
     border-radius: 10px;
-    padding-left: 80px;
-    padding-right: 30px;
+  
   }
     
-  .Logo a{
-    font-size: 15px;
+  .logo h4 {
+    font-size: 14px;
     font-weight: 500;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
+   
   }
 
-  ul{
-    margin-left: 0px;
-    margin-right: 80px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  .navbar .navdiv ul{
+   margin: 5px;
+   display: grid;
+   grid-template-columns: auto auto ;
+   width: 80%;
+   padding:0px 20px;
   }
-  ul li a{
-   margin-right: 0px;
-    margin-top: -50px;
-   
-    padding: 40px;
+  .navbar .navdiv .ul .li{
+    width: 60px;
+  }
+  .navbar .navdivul li a{
     color: white;
-   font-weight: 600;
+   font-weight: 300;
+   font-size: 12px;
+   width: 60px;
+  }
+
+.man{
+  display: flex;
+  background-image: url(image/one-man.png);
+  background-size: cover;
+  margin-right: 500px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  width: 50%; 
+  flex-direction: column;
+  height: 300px;
+  z-index: 999;
+  animation: man 40s infinite ease-in-out;
+}
+.background{
+  }
+.background-form h1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  margin-right: 70px;
+  margin-top: 30px;
+  color:rgb(209, 59, 102);
+  font-family: system-ui, sans-serif;
+  }
+  .background-form form {
+    width: 200px;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+  .backround {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  
+  .background .background-form{
+  
+    width: 40%;
+  
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .background .background-form h1{
+    font-size: 30px;
+    color:rgb(209, 59, 102);
+    font-family: system-ui,sans-serif;
+  }
+  
+
+
+
+
+  .anim-box{
+    display: none;
   }
   .father{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
+   
   }
 
   .company{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    height: fit-content;
-    flex-direction: row;
-    width: 70%;
     height: 70px;
-    margin-left: 67px;
+    flex-direction: row;
+    width: 350px;
+    margin-left: 20px;
   }
 
   .company a img{
     width: 50px;
-    margin: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 20px;
+    margin: 10px;
   }
-  .man form{
+  .parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .parent:hover {
+    background-color: transparent;
+  }
+  .second-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     flex-direction: column;
+  }
+  .firstborn, .secondborn .thirdborn .fourthborn{
+    width: 400px;
+    height: 300px;
+    font-family: sans-serif;
+  }
+  
+
+  .display{
+    color: red;
+    text-shadow: 2px 2px black;
+    margin-right: 60px;
+   }
+  .animation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    margin-right: 80px;
+    margin-left: -20px;
+  
+  }
+  .animation-one{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    background-color: none;
+    padding: 20px;
+  }
+  
+  .animation .animation-one .box-one {
     display: flex;
     justify-content: center;
-    margin-top: -700px;
-    margin-left: 300px;
+    width: 90%;
+    height: 400px;
+    margin-left: -40px;
+    margin-right: 70px;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px black;
+    
+  }
+  .animation .animation-one .box-one img{
+    width: 90%;
+    height: 300px;
+    
+  }
+  
+ 
+  .man form{
+    display: none;
+  
   }
 
   .background{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: greenyellow;
+    
   }
     
-.man{
-  display: flex;
-  background-color: rgb(250, 245, 245);
-  background-image: url(one-man.png);
-  background-size: cover;
- margin-left: 0px;
-  display: flex;
-  justify-content: center;
-  width: 100%; 
-  flex-direction: column;
-  height: 300px;
-}
-.man h1{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 450px;
-  margin-right: 70px;
-  color:rgb(209, 59, 102);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
  
-input[type="text"]{
-position: relative;
-box-sizing: border-box;
-width: 100px;
-height: 40px;
-border-color: rgb(209, 59, 102);
-border-radius: 11px 0 0 11px;
-}
-
-input[type="submit"] { 
-position: relative;
-background-color:rgb(209, 59, 102);
-box-sizing: border-box;
-width: 70px;
-height: 40px;
-border-color:rgb(186, 34, 118);
-border-radius:  11px 11px 11px 11px;
-cursor: pointer;
-color: white;
-}
 
 
 .services {
@@ -841,27 +841,26 @@ color: white;
   font-size: 20px;
   margin: 10px;
 }
-
 .want {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  transition: width 3s, background-color 3s, transform 3s;
 }
+
 
 .card {
   display: flex;
   justify-content: center;
-  width: 270px;
+  align-items: center;
+  width: 70%;
   height: 600px;
   border-radius: 20px;
-  line-height: 17px;
-  margin: 40px;
+  line-height: 30px;
   flex-direction: column;
   text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  text-align: left;
   box-shadow:
   1.2px 1.6px 3.6px rgba(0, 0, 0, 0.018),
   3.3px 4.5px 10px rgba(0, 0, 0, 0.01),
@@ -870,42 +869,28 @@ color: white;
 }
 
 .card1{
-  line-height: 12px;
+  line-height: 20px;
 }
 
 .enviar {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
   background-color: pink;
   border-radius: 10px;
   width: 200px;
   margin-top: 20px;
-  margin-left: 30px;
+  
 }
 
-  .parent{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 150px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-  }
+
   
   .parent .firstborn{
 display: flex;
 flex-wrap: wrap;
 flex-direction: column;
 justify-content: center;
-margin-left: -110px;
-margin-right: 200px;
-margin-top: 30px;
-margin-bottom: 40px;
 width: 300px;
 height: 300px;
 color: white;
@@ -931,60 +916,16 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
       margin-top: 2px;
     }
         
-  .second-parent {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-around;
-    margin-left: 125px;
-    width: auto;
-    height: auto;
-    margin-bottom: 100px;
-   }
 
-   
-   .second-parent div{
-     margin-left: -160px;
-     margin-right: 200px;
-   }
-  
-    .secondborn, .fourthborn  {
-      display: flex;
-      background-color: white;
-      width: 170px;
-      height: 200px;
-      border-radius: 20px;
-      flex-direction: column;
-      text-align: center;
-      padding: 10px;
-      line-height: 20px;
-      box-shadow:
-      0px 0px 3.6px rgba(0, 0, 0, 0.024),
-      0px 0px 10px rgba(0, 0, 0, 0.035),
-      0px 0px 24.1px rgba(0, 0, 0, 0.046),
-      0px 0px 80px rgba(0, 0, 0, 0.07)
-    }
+
     
-    .thirdborn {
-      display: flex;
-      background-color: rgb(186, 34, 118);
-      width: 170px;
-      height: 200px;
-      border-radius: 20px;
-      flex-direction: column;
-      text-align: center;
-      line-height: 20px;
-      padding: 10px;
-      box-shadow:
-      0px 0px 3.6px rgba(0, 0, 0, 0.024),
-      0px 0px 10px rgba(0, 0, 0, 0.035),
-      0px 0px 24.1px rgba(0, 0, 0, 0.046),
-      0px 0px 80px rgba(0, 0, 0, 0.07)
-    }
     
  .girl-section {
   background-color: rgba(203, 222, 222, 0.903);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .presenting h1{
@@ -993,135 +934,154 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 .girl-parent{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .girl {
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 300px;
-  background-color: rgb(241, 162, 175);
-  padding: 10px;
-  margin-bottom: 10px;
+  width: 300px;
+  height: 250px;
+  background: rgb(241, 162, 175);
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 10px;
-  margin: auto;
   box-shadow:
   1.2px 1.6px 3.6px rgba(0, 0, 0, 0.018),
   3.3px 4.5px 10px rgba(0, 0, 0, 0.01),
   7.8px 10.9px 24.1px rgba(0, 0, 0, 0.3),
   26px 36px 80px rgba(0, 0, 0, 0.1)
+  
 }
 
 .girl img{
-  padding-top: 60px;
-  width: 250px;
+  width: 300px;
   height: 250px;
+  border-radius: 10px;
 }
+
+/* --------------another---------------- */
 
 .pregunta-parent{
-  display: flex;
-  flex-direction: column;
-  line-height: auto;
-  align-items: center;
-  margin: 20px;
+display: grid;
+grid-template-columns: auto auto;
+  width: 100%;
+  margin-left: 40px;
 }
-
-.pregunta-parent h1, p{
+.pregunta-parent div{
+width: 80%;
+}
+.pregunta-parent div h4{
   display: flex;
   justify-content: center;
+  text-align: left;
+  
+  z-index: 100;
+}
+.pregunta-parent div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(74, 73, 73);
 }
 
-.footer-father{
+/* -----------section three-------- */
+
+ .section-three{
   display: flex;
   width: 100%;
-  height: 300px;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  background-color:  rgb(186, 34, 118);
-  padding-top: 10px;
-  margin-top: 20px;
-}
-
-.footer-father h3{
-margin-left: 100px;
-color: white;
-margin-bottom: 30px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.footer-child{
-  display: flex;
-  width: 130px;
-  height: 60px;
-  justify-content: center;
-  background-color: white;
-align-items: center;
-margin-left: 150px;
-border-radius: 3px;
-margin-top: 40px;
-}
-
-.footer-child h3{
-font-size: 20px;
-margin-top: 15px;
-margin-left: -12px;
-align-items: center;
-color: rgb(186, 34, 118);
-}
-
- .father {
-   display: flex;
-   justify-content: center;
-   margin-top: 50px;
+  overflow: hidden;
  }
- 
- .father h4{
-  width: 250px;
-  height: 80px;
-  text-align: center;
-  margin-left: -65px;
- }
- 
- footer{
-   display: flex;
-   justify-content: center;
-   color: rgba(88, 84, 84, 0.839);
- }
- 
 .under{
+  margin-top: -120px;
   display: flex;
-  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 700px;
   color: white;
   padding-top: 200px;
   flex-direction: column;
   background-color: purple;
+  overflow: hidden;
  }
  
  .form-under-one{
    display: flex;
+   width: 100%;
    justify-content: center;
    flex-direction: column;
    align-content: center;
-   padding-top: 350px;
-  margin-left: 70px;
+   padding: 20px;
  }
  
  .form-under-one h1{
+  font-size: 30px;
 font-size: 20px;
+
  }
+ .form-under-one h4{
+  text-align: justify;
+  width: 80%;
+
+   }
 
  .form-under-two {
-   margin-left: 0;
-   width: 100px;
-   margin-bottom: 400px;
+   width: 100%;
    display: flex;
+   margin-right: 20%;
+   align-items: center;
    justify-content: center;
    flex-direction: column;
+ }
+ .form-under-two  input{
+  width: 80%;
+ }
+ .form-under-two textarea{
+  width: 80%;
+  margin-top: -100px;
+  height: 80px;
+ }
+ .footer-father{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color:  rgb(186, 34, 118);
+  margin-top: 20px;
+}
+.footer-father h3{
+color: white;
+font-size: 20px;
+margin-bottom: 10px;
+}
+.footer-child{
+  display: flex;
+  width: 180px;
+  height: 40px;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  border-radius: 3px;
+}
+.footer-child h3{
+  align-items: center;
+  color: rgb(186, 34, 118);
+  margin-top: 19px;
+}
+ footer{
+   display: flex;
+   justify-content: center;
+   color: rgba(88, 84, 84, 0.839);
  }
  
 .stand{
