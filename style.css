@@ -658,7 +658,7 @@ footer{
   .navbar .navdiv .ul .li{
     width: 60px;
   }
-  .navbar .navdivul li a{
+  .navbar .navdiv ul li a{
     color: white;
    font-weight: 300;
    font-size: 12px;
@@ -669,13 +669,11 @@ footer{
   display: flex;
   background-image: url(image/one-man.png);
   background-size: cover;
-  margin-right: 500px;
-  margin-left: 0px;
-  display: flex;
+  margin-right: 200px;
+  margin-left: 100px;
   justify-content: center;
-  width: 50%; 
-  flex-direction: column;
-  height: 300px;
+  width: 45%; 
+  height: 400px;
   z-index: 999;
   animation: man 40s infinite ease-in-out;
 }
@@ -686,14 +684,14 @@ footer{
   justify-content: center;
   text-align: center;
   font-size: 30px;
-  margin-right: 70px;
   margin-top: 30px;
   color:rgb(209, 59, 102);
   font-family: system-ui, sans-serif;
   }
   .background-form form {
-    width: 200px;
+    width: 300px;
     display: flex;
+    margin: 0px 50px;
 }
 
 
