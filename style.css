@@ -617,6 +617,10 @@ footer{
   margin: 20px 43%;
   color: rgba(88, 84, 84, 0.839);
 }
+.foot-finish{
+ display: grid;grid-template-columns: auto; 
+ 
+}
 
 /*-----------------this is for 480creen-------------------*/
 
