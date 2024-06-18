@@ -1753,6 +1753,13 @@ justify-content: center;
  grid-gap: 20px;
  padding: 10px;
 }
+  .foot-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  }
 }
 
 /*-----------------this is for 1020creen-------------------*/
