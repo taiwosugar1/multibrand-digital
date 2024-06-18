@@ -823,6 +823,9 @@ footer{
     display: none;
   
   }
+   .footer-father h3{
+    padding-left: 50px;
+  }
 
 .services {
   text-align: center;
