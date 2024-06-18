@@ -134,10 +134,10 @@ li a{
 }
   @keyframes man{
   0%{ background-image: url(images/man4.png);}
-  20%{ background-image: url(images/image-of-man2.png);}
- 40% {  background-image: url(images/one-man.png);}
- 60% {  background-image: url(images/man6.png);}
- 80% {  background-image: url(images/image-of-man.jpg);}
+  30%{ background-image: url(images/image-of-man2.png);}
+ 49% {  background-image: url(images/one-man.png);}
+ 75% {  background-image: url(images/man6.png);}
+ /* 80% {  background-image: url(images/image-of-man.jpg);} */
  100% {  background-image: url(images/man5.png);}
   }
 
@@ -163,11 +163,12 @@ li a{
 }
 
 .company a{
-  width: 50px;
+  width: 60px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .company a img {
   width: 50px;
@@ -365,6 +366,7 @@ margin: 0px 50px;
   grid-template-columns: auto auto auto auto;
   background-color: none;
   width: 80%;
+  place-content: center;
   margin-left: 60px;
 }
 .animation-one .box-one {
@@ -606,7 +608,7 @@ footer{
 
 /*-----------------this is for 480creen-------------------*/
 
-@media (max-width:480px) {
+@media screen and (max-width:480px) {
   body {
     overflow-x: hidden;
     background-color: rgb(198, 224, 224);
@@ -625,6 +627,7 @@ footer{
     background: rgb(56, 56, 95);
     z-index: 9999;
     top: 0;
+    overflow: hidden;
     position: relative;
   }
   
@@ -658,7 +661,7 @@ footer{
   .navbar .navdiv .ul .li{
     width: 60px;
   }
-  .navbar .navdiv ul li a{
+  .navbar .navdivul li a{
     color: white;
    font-weight: 300;
    font-size: 12px;
@@ -669,52 +672,43 @@ footer{
   display: flex;
   background-image: url(image/one-man.png);
   background-size: cover;
-  margin-right: 200px;
-  margin-left: 100px;
+  margin-right: 500px;
+  margin-left: 300px;
+  margin-top: -300px;
+  display: flex;
   justify-content: center;
-  width: 45%; 
-  height: 400px;
-  z-index: 999;
+  width: 40%; 
+  flex-direction: column;
+  height: 300px;
+  z-index: 9999;
+
   animation: man 40s infinite ease-in-out;
 }
 .background{
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+  grid-gap: 100px;
   }
 .background-form h1{
   display: flex;
+  align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 30px;
+  margin-left: 50px;
   margin-top: 30px;
   color:rgb(209, 59, 102);
   font-family: system-ui, sans-serif;
   }
   .background-form form {
-    width: 300px;
-    display: flex;
-    margin: 0px 50px;
+   display: none;
 }
 
-
-
-
-
-
-
-
-
-  .backround {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-  }
   
   
   .background .background-form{
-  
     width: 40%;
-  
     display: flex;
     justify-content: space-between;
 
@@ -725,24 +719,21 @@ footer{
     font-family: system-ui,sans-serif;
   }
   
-
-
-
-
   .anim-box{
     display: none;
   }
   .father{
     display: grid;
     grid-template-columns: auto auto;
-   
+   place-content: center;
+   grid-gap: 50px;
   }
 
   .company{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
+    height: 90px;
     flex-direction: row;
     width: 350px;
     margin-left: 20px;
@@ -797,6 +788,7 @@ footer{
     grid-template-columns: auto;
     background-color: none;
     padding: 20px;
+    place-content: center;
   }
   
   .animation .animation-one .box-one {
@@ -822,16 +814,6 @@ footer{
     display: none;
   
   }
-
-  .background{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-  }
-    
- 
-
 
 .services {
   text-align: center;
