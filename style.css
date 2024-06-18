@@ -1760,6 +1760,8 @@ justify-content: center;
   flex-wrap: wrap;
   
   }
+.foot-details{
+  margin-left: -100px;
 }
 
 /*-----------------this is for 1020creen-------------------*/
