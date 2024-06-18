@@ -619,12 +619,13 @@ footer{
 }
 .foot-finish{
  display: grid;grid-template-columns: auto; 
- 
+
 }
 
 /*-----------------this is for 480creen-------------------*/
 
-@media screen and (max-width:490px) {
+
+@media (max-width: 600px) {
   body {
     overflow-x: hidden;
     background-color: rgb(198, 224, 224);
@@ -806,25 +807,73 @@ footer{
   }
   .parent{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    width: 100%;
   }
-  .parent:hover {
-    background-color: transparent;
-  }
+  
   .second-parent{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-     flex-direction: column;
+    margin-right: 20px;
+     width: 100%;
   }
-  .firstborn, .secondborn .thirdborn .fourthborn{
-    width: 400px;
-    height: 300px;
-    font-family: sans-serif;
+
+  .parent .firstborn{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 300px;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(37, 32, 32);
+  font-family: system-ui,  sans-serif;
   }
+  .parent .firstborn h5, .parent .firstborn h2{
+    margin: 10px;
+  }
+  
+  .parent .firstborn .box1 {
+      
+      color: bisque;
+      font-weight: 300;
+      width: 80%;
+      margin: 10px;
+      height: 100px;
+    }
+    
+    .parent .firstborn .box2 h3 {
+      margin: 10px;
+      display: flex;
+      background-color:  teal;
+      padding-left: 20px;
+      align-items: center;
+      border-radius: 5px;
+      width: 200px;
+      height: 50px;
+    }
+
+    .parent .second-parent .secondborn,  .parent .second-parent .thirdborn,  .parent .second-parent .fourthborn{
+      width: 70%;
+      padding: 0px 30px;
+      height: 200px;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .parent .second-parent .secondborn h2,  .parent .second-parent .fourthborn h2{
+      color: teal;
+      margin: 20px;
+    }
+   
+
   
 
   .display{
@@ -839,8 +888,6 @@ footer{
     justify-content: center;
     background: none;
     border: none;
-    margin-right: 80px;
-    margin-left: -20px;
   
   }
   .animation-one{
@@ -848,7 +895,8 @@ footer{
     display: grid;
     grid-template-columns: auto;
     background-color: none;
-    padding: 20px;
+   margin-right: 80px;
+   margin-left: auto;
     place-content: center;
   }
   
@@ -857,8 +905,8 @@ footer{
     justify-content: center;
     width: 90%;
     height: 400px;
-    margin-left: -40px;
-    margin-right: 70px;
+    
+    
     border-radius: 5px;
     color: white;
     text-shadow: 2px 2px black;
@@ -927,57 +975,6 @@ footer{
   margin-top: 20px;
   
 }
-
-.parent{
-  display: grid;
-  grid-template-columns: auto;
-  place-content: center;
-}
-
-  
-  .parent .firstborn{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: center;
-width: 300px;
-height: 300px;
-color: white;
-padding: 20px;
-border-color: blue;
-border-radius: 10px;
-background-color: rgb(37, 32, 32);
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  .parent .firstborn h5, .parent .firstborn h2{
-    margin: 10px;
-  }
-  
-  .parent .firstborn .box1 {
-      
-      color: bisque;
-      font-weight: 300;
-      margin-top: 2px;
-      width: 80%;
-      margin: 10px;
-      height: 100px;
-    }
-    
-    .parent .firstborn .box2 h3 {
-      margin: 10px;
-      display: flex;
-      background-color:  rgb(186, 34, 118);
-      justify-content: center;
-      border-radius: 5px;
-      width: 150px;
-      height: 50px;
-    }
-
-    .parent .second-parent .secondborn,  .parent .second-parent .thirdborn,  .parent .second-parent .fourthborn{
-      width: 60%;
-      height: 200px;
-      margin-right: 75px;
-    }
 
     
  .girl-section {
@@ -1065,12 +1062,11 @@ width: 80%;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 700px;
+  height: 900px;
   color: white;
   padding-top: 200px;
   flex-direction: column;
   background-color: purple;
-  overflow: hidden;
  }
  
  .form-under-one{
@@ -1096,17 +1092,566 @@ font-size: 20px;
  .form-under-two {
    width: 100%;
    display: flex;
-   margin-right: 20%;
+  margin-left: -85px;
    align-items: center;
    justify-content: center;
    flex-direction: column;
  }
  .form-under-two  input{
   width: 80%;
+  font-size: 12px;
+  padding-left: 10px;
  }
+ 
+.form-under-two textarea{
+  width: 80%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 200px;
+  border-color: rgb(209, 59, 102);
+  border-radius: 10px;
+}
+.post{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(209, 59, 102);
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  color: white;
+  
+}
+
+ .footer-father{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color:  rgb(186, 34, 118);
+  margin-top: 20px;
+}
+.footer-father h3{
+color: white;
+font-size: 20px;
+margin-bottom: 10px;
+}
+.footer-child{
+  display: flex;
+  width: 180px;
+  height: 40px;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  border-radius: 3px;
+}
+.footer-child h3{
+  align-items: center;
+  color: rgb(186, 34, 118);
+  margin-top: 19px;
+}
+ footer{
+   display: flex;
+   justify-content: center;
+   color: rgba(88, 84, 84, 0.839);
+ }
+ 
+.father{
+  display: grid;
+  grid-template-columns: auto auto;
+ place-content: center;
+ grid-gap: 60px;
+
+}
+}
+
+@media screen and (max-width:490px) {
+  body {
+    overflow-x: hidden;
+    background-color: rgb(198, 224, 224);
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: rgb(56, 56, 95);
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .navdiv {
+   display: grid;
+   place-content: center;
+   grid-template-columns: auto auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    border-radius: 10px;
+   margin: 5px;
+  }
+    
+  .logo h4 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+
+  .navbar .navdiv ul{
+   display: flex;
+   width: 90%;
+   padding:0px 20px;
+   margin-left: -20px;
+  }
+  .navbar .navdiv ul .li{
+    width: 70px;
+    height: 30px;
+  
+  }
+  .navbar .navdiv ul li a{
+    color: white;
+   font-size: 12px;
+   width: 50px;
+   height: 30px;
+   padding: 1px;
+  }
+
+.background{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+  grid-gap: 50px;
+  margin-top: -20px;
+  }
+.background-form h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  margin-left: 70px;
+  margin-top: 30px;
+  color:rgb(209, 59, 102);
+  font-family: system-ui, sans-serif;
+  z-index: 999;
+  }
+  .background-form form {
+   display: flex;
+   margin-left: 150px;
+  
+}
+
+
+
+.background-form form input{
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+ 
+}
+ 
+.background-form form input[type="text"]{
+  position: relative;
+  font-size: small;
+  box-sizing: border-box;
+  width: 200px;
+  height: 35px;
+  border-color: rgb(209, 59, 102);
+  border-radius: 11px 0 0 11px;
+}
+
+.background-form form input[type="submit"] { 
+  position: relative;
+  background-color:rgb(209, 59, 102);
+  font-size: small;
+  box-sizing: border-box;
+  width: 70px;
+  height: 35px;
+  margin-left: -65px;
+  border-color:rgb(186, 34, 118);
+  border-radius:  11px 11px 11px 11px;
+  cursor: pointer;
+  color: white;
+}
+  
+  .background .background-form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  .background .background-form h1{
+    font-size: 30px;
+    color:rgb(209, 59, 102);
+    font-family: system-ui,sans-serif;
+  }
+  .man{
+    display: flex;
+    background-image: url(image/one-man.png);
+    background-size: cover;
+    margin-right: 600px;
+    margin-left: 300px;
+    margin-top: -300px;
+    display: flex;
+    justify-content: center;
+    width: 42%; 
+    flex-direction: column;
+    height: 300px;
+    z-index: 9999;
+  
+    animation: man 40s infinite ease-in-out;
+  }
+  
+  .anim-box{
+    display: none;
+  }
+ 
+  .social-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px 30px;
+    height: 120px;
+    
+  }
+  .company{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    flex-direction: row;
+    width: 350px;
+  }
+
+  .company a img{
+    width: 50px;
+    margin: 10px;
+    height: 40px;
+  }
+ 
+
+ .parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+    .parent:hover {
+    background-color: transparent;
+  }
+  .second-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+ .parent .firstborn{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+width: 300px;
+height: 300px;
+color: white;
+padding: 20px;
+border-color: blue;
+border-radius: 10px;
+background-color: rgb(37, 32, 32);
+font-family: system-ui, sans-serif;
+  }
+  .parent .firstborn h5, .parent .firstborn h2{
+    margin: 10px;
+  }
+  
+  .parent .firstborn .box1 {
+      
+      color: bisque;
+      font-weight: 300;
+      margin-top: 2px;
+      width: 80%;
+      margin: 10px;
+      height: 100px;
+    }
+    
+    .parent .firstborn .box2 h3 {
+      margin: 10px;
+      display: flex;
+      background-color:  rgb(186, 34, 118);
+      justify-content: center;
+      border-radius: 5px;
+      width: 150px;
+      height: 50px;
+    }
+      
+  .parent .second-parent .secondborn,  .parent .second-parent .thirdborn,  .parent .second-parent .fourthborn{
+    width: 70%;
+    padding: 0px 20px;
+    height: 250px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .parent .second-parent .secondborn h2,  .parent .second-parent .fourthborn h2{
+    color: teal;
+    margin: 20px;
+  }
+
+  .display{
+    color: red;
+    text-shadow: 2px 2px black;
+    margin-right: 60px;
+   }
+  .animation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    margin-right: 80px;
+    margin-left: -20px;
+  
+  }
+  .animation-one{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    background-color: none;
+    place-content: center;
+    margin-left: 15px;
+  }
+  
+  .animation .animation-one .box-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 400px;
+    border-radius: 5px;
+    color: black;
+    text-shadow: 2px 2px white;
+    
+  }
+  .animation .animation-one .box-one img{
+    width: 90%;
+    height: 300px;
+    
+  }
+  
+ 
+  .man form{
+    display: none;
+  
+  }
+  .footer-father h3{
+    padding-left: 50px;
+  }
+
+.services {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 10px;
+}
+.want {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  transition: width 3s, background-color 3s, transform 3s;
+}
+
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 600px;
+  border-radius: 20px;
+  line-height: 30px;
+  flex-direction: column;
+  text-align: center;
+  box-shadow:
+  1.2px 1.6px 3.6px rgba(0, 0, 0, 0.018),
+  3.3px 4.5px 10px rgba(0, 0, 0, 0.01),
+  7.8px 10.9px 24.1px rgba(0, 0, 0, 0.042),
+  26px 36px 80px rgba(0, 0, 0, 0.04)
+}
+
+.card1{
+  line-height: 20px;
+}
+
+.enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: pink;
+  border-radius: 10px;
+  width: 200px;
+  margin-top: 20px;
+  
+}
+
+    
+ .girl-section {
+  background-color: rgba(203, 222, 222, 0.903);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presenting h1{
+  width: auto;
+}
+
+.girl-parent{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.girl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 250px;
+  background: rgb(241, 162, 175);
+  margin-right: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow:
+  1.2px 1.6px 3.6px rgba(0, 0, 0, 0.018),
+  3.3px 4.5px 10px rgba(0, 0, 0, 0.01),
+  7.8px 10.9px 24.1px rgba(0, 0, 0, 0.3),
+  26px 36px 80px rgba(0, 0, 0, 0.1)
+  
+}
+
+.girl img{
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+/* --------------another---------------- */
+
+.pregunta-parent{
+display: grid;
+grid-template-columns: auto auto;
+  width: 100%;
+  margin-left: 40px;
+}
+.pregunta-parent div{
+width: 80%;
+}
+.pregunta-parent div h4{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  
+  z-index: 100;
+}
+.pregunta-parent div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(74, 73, 73);
+  font-weight: 400;
+}
+
+/* -----------section three-------- */
+
+ .section-three{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ }
+.under{
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 700px;
+  color: white;
+  flex-direction: column;
+  background-color: purple;
+  overflow: hidden;
+  padding-top: 200px;
+  padding-bottom: 50px;
+ }
+ 
+ .form-under-one{
+  margin-top: -80px;
+   display: flex;
+   width: 100%;
+   height: 300px;
+   justify-content: center;
+   flex-direction: column;
+   align-content: center;
+   padding:0px 20px;
+ }
+ 
+ .form-under-one h1{
+  font-size: 30px;
+  color:  rgb(241, 162, 175);
+
+ }
+ .form-under-one h4{
+  text-align: justify;
+  width: 80%;
+  color: white;
+
+   }
+
+ .form-under-two {
+   width: 100%;
+   height: 400px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
  .form-under-two textarea{
   width: 80%;
-  margin-top: -100px;
+  margin-top: 0px;
   height: 80px;
  }
  .footer-father{
