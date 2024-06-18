@@ -617,7 +617,7 @@ footer{
 
 /*-----------------this is for 480creen-------------------*/
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:490px) {
   body {
     overflow-x: hidden;
     background-color: rgb(198, 224, 224);
